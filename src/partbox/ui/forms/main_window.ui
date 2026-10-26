@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>PartBOXMainWindow</class>
+ <widget class="QMainWindow" name="PartBOXMainWindow">
+  <property name="geometry"><rect><x>0</x><y>0</y><width>1440</width><height>820</height></rect></property>
+  <property name="minimumSize"><size><width>1050</width><height>650</height></size></property>
+  <property name="windowTitle"><string>小料仓 PartBOX</string></property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="outerLayout">
+    <property name="spacing"><number>0</number></property>
+    <property name="leftMargin"><number>0</number></property><property name="topMargin"><number>0</number></property><property name="rightMargin"><number>0</number></property><property name="bottomMargin"><number>0</number></property>
+    <item>
+     <widget class="QFrame" name="topBar">
+      <property name="minimumSize"><size><width>0</width><height>88</height></size></property>
+      <property name="maximumSize"><size><width>16777215</width><height>88</height></size></property>
+      <layout class="QHBoxLayout" name="topBarLayout">
+       <property name="spacing"><number>20</number></property>
+       <property name="leftMargin"><number>24</number></property><property name="topMargin"><number>12</number></property><property name="rightMargin"><number>20</number></property><property name="bottomMargin"><number>12</number></property>
+       <item>
+        <widget class="QWidget" name="brandBlock" native="true">
+         <property name="minimumSize"><size><width>180</width><height>0</height></size></property>
+         <property name="maximumSize"><size><width>180</width><height>16777215</height></size></property>
+         <layout class="QVBoxLayout" name="brandLayout">
+          <property name="spacing"><number>0</number></property>
+          <property name="leftMargin"><number>0</number></property><property name="topMargin"><number>0</number></property><property name="rightMargin"><number>0</number></property><property name="bottomMargin"><number>0</number></property>
+          <item>
+           <widget class="QLabel" name="brandEnglish">
+            <property name="minimumSize"><size><width>120</width><height>32</height></size></property>
+            <property name="maximumSize"><size><width>120</width><height>32</height></size></property>
+            <property name="font"><font><family>Microsoft YaHei UI</family><pointsize>19</pointsize><weight>81</weight><bold>true</bold></font></property>
+            <property name="text"><string>PartBOX</string></property><property name="alignment"><set>Qt::AlignLeft|Qt::AlignVCenter</set></property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QWidget" name="brandChinese" native="true">
+            <property name="minimumSize"><size><width>120</width><height>30</height></size></property>
+            <property name="maximumSize"><size><width>120</width><height>30</height></size></property>
+            <layout class="QHBoxLayout" name="brandChineseLayout">
+             <property name="spacing"><number>0</number></property>
+             <property name="leftMargin"><number>0</number></property><property name="topMargin"><number>0</number></property><property name="rightMargin"><number>0</number></property><property name="bottomMargin"><number>0</number></property>
+             <item><widget class="QLabel" name="brandChineseFirst"><property name="font"><font><family>Microsoft YaHei UI</family><pointsize>16</pointsize><weight>63</weight><bold>true</bold></font></property><property name="text"><string>小</string></property><property name="alignment"><set>Qt::AlignLeft|Qt::AlignVCenter</set></property></widget></item>
+             <item><spacer name="brandChineseSpacerLeft"><property name="orientation"><enum>Qt::Horizontal</enum></property><property name="sizeHint"><size><width>20</width><height>20</height></size></property></spacer></item>
+             <item><widget class="QLabel" name="brandChineseMiddle"><property name="font"><font><family>Microsoft YaHei UI</family><pointsize>16</pointsize><weight>63</weight><bold>true</bold></font></property><property name="text"><string>料</string></property><property name="alignment"><set>Qt::AlignHCenter|Qt::AlignVCenter</set></property></widget></item>
+             <item><spacer name="brandChineseSpacerRight"><property name="orientation"><enum>Qt::Horizontal</enum></property><property name="sizeHint"><size><width>20</width><height>20</height></size></property></spacer></item>
+             <item><widget class="QLabel" name="brandChineseLast"><property name="font"><font><family>Microsoft YaHei UI</family><pointsize>16</pointsize><weight>63</weight><bold>true</bold></font></property><property name="text"><string>仓</string></property><property name="alignment"><set>Qt::AlignRight|Qt::AlignVCenter</set></property></widget></item>
+            </layout>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item><widget class="QLineEdit" name="searchInput"><property name="minimumSize"><size><width>0</width><height>48</height></size></property><property name="maximumSize"><size><width>16777215</width><height>48</height></size></property><property name="placeholderText"><string>搜索：电阻、0603、CLCC、LM358、品牌……</string></property></widget></item>
+       <item><widget class="QPushButton" name="materialImportButton"><property name="text"><string>＋ 导入物料明细</string></property></widget></item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QWidget" name="mainBody" native="true">
+      <layout class="QHBoxLayout" name="mainBodyLayout">
+       <property name="spacing"><number>0</number></property>
+       <property name="leftMargin"><number>0</number></property><property name="topMargin"><number>0</number></property><property name="rightMargin"><number>0</number></property><property name="bottomMargin"><number>0</number></property>
+       <item>
+        <widget class="QListWidget" name="navigation">
+         <property name="minimumSize"><size><width>168</width><height>0</height></size></property><property name="maximumSize"><size><width>168</width><height>16777215</height></size></property>
+         <item><property name="text"><string>元件库存</string></property></item><item><property name="text"><string>物料对比</string></property></item><item><property name="text"><string>我的项目</string></property></item><item><property name="text"><string>库存流水</string></property></item><item><property name="text"><string>导入记录</string></property></item><item><property name="text"><string>设置</string></property></item>
+        </widget>
+       </item>
+       <item>
+        <widget class="QStackedWidget" name="pages">
+         <property name="currentIndex"><number>0</number></property>
+         <widget class="QWidget" name="inventoryPage">
+          <layout class="QVBoxLayout" name="inventoryLayout">
+            <property name="leftMargin"><number>16</number></property><property name="topMargin"><number>16</number></property><property name="rightMargin"><number>16</number></property><property name="bottomMargin"><number>16</number></property>
+           <item>
+            <widget class="QScrollArea" name="filterScroll">
+             <property name="focusPolicy"><enum>Qt::NoFocus</enum></property><property name="frameShape"><enum>QFrame::NoFrame</enum></property><property name="verticalScrollBarPolicy"><enum>Qt::ScrollBarAlwaysOff</enum></property><property name="horizontalScrollBarPolicy"><enum>Qt::ScrollBarAsNeeded</enum></property><property name="widgetResizable"><bool>true</bool></property><property name="maximumHeight"><number>66</number></property>
+             <widget class="QWidget" name="filterBar"><property name="geometry"><rect><x>0</x><y>0</y><width>600</width><height>60</height></rect></property><layout class="QHBoxLayout" name="filterRow"><property name="spacing"><number>6</number></property><property name="leftMargin"><number>2</number></property><property name="topMargin"><number>8</number></property><property name="rightMargin"><number>2</number></property><property name="bottomMargin"><number>8</number></property></layout></widget>
+            </widget>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="statsLayout">
+             <property name="spacing"><number>10</number></property>
+             <item><widget class="QFrame" name="statOrdersCard"><property name="minimumSize"><size><width>0</width><height>86</height></size></property><property name="maximumSize"><size><width>16777215</width><height>86</height></size></property><layout class="QHBoxLayout" name="statOrdersLayout"><item><widget class="QLabel" name="statOrdersLabel"><property name="text"><string>订单数</string></property></widget></item><item><widget class="QLabel" name="statOrdersValue"><property name="text"><string>0</string></property><property name="alignment"><set>Qt::AlignRight|Qt::AlignVCenter</set></property></widget></item></layout></widget></item>
+             <item><widget class="QFrame" name="statKindsCard"><property name="minimumSize"><size><width>0</width><height>86</height></size></property><property name="maximumSize"><size><width>16777215</width><height>86</height></size></property><layout class="QHBoxLayout" name="statKindsLayout"><item><widget class="QLabel" name="statKindsLabel"><property name="text"><string>元件种类</string></property></widget></item><item><widget class="QLabel" name="statKindsValue"><property name="text"><string>0</string></property><property name="alignment"><set>Qt::AlignRight|Qt::AlignVCenter</set></property></widget></item></layout></widget></item>
+             <item><widget class="QFrame" name="statStockCard"><property name="minimumSize"><size><width>0</width><height>86</height></size></property><property name="maximumSize"><size><width>16777215</width><height>86</height></size></property><layout class="QHBoxLayout" name="statStockLayout"><item><widget class="QLabel" name="statStockLabel"><property name="text"><string>库存总数</string></property></widget></item><item><widget class="QLabel" name="statStockValue"><property name="text"><string>0</string></property><property name="alignment"><set>Qt::AlignRight|Qt::AlignVCenter</set></property></widget></item></layout></widget></item>
+             <item><widget class="QFrame" name="statSpentCard"><property name="minimumSize"><size><width>0</width><height>86</height></size></property><property name="maximumSize"><size><width>16777215</width><height>86</height></size></property><layout class="QHBoxLayout" name="statSpentLayout"><item><widget class="QLabel" name="statSpentLabel"><property name="text"><string>累计采购</string></property></widget></item><item><widget class="QLabel" name="statSpentValue"><property name="text"><string>¥0.00</string></property><property name="alignment"><set>Qt::AlignRight|Qt::AlignVCenter</set></property></widget></item></layout></widget></item>
+             <item><widget class="QFrame" name="projectImportCard"><property name="minimumSize"><size><width>180</width><height>86</height></size></property><property name="maximumSize"><size><width>180</width><height>86</height></size></property><layout class="QVBoxLayout" name="projectImportCardLayout"><item><widget class="QPushButton" name="projectImportButton"><property name="text"><string>导入到项目</string></property></widget></item></layout></widget></item>
+             <item><widget class="QFrame" name="comparisonAddCard"><property name="minimumSize"><size><width>150</width><height>86</height></size></property><property name="maximumSize"><size><width>150</width><height>86</height></size></property><layout class="QVBoxLayout" name="comparisonAddCardLayout"><item><widget class="QPushButton" name="comparisonAddButton"><property name="text"><string>加入对比</string></property></widget></item></layout></widget></item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="inventoryBodyLayout">
+             <property name="spacing"><number>4</number></property><property name="leftMargin"><number>0</number></property><property name="topMargin"><number>0</number></property><property name="rightMargin"><number>0</number></property><property name="bottomMargin"><number>0</number></property>
+             <item><widget class="QTableWidget" name="componentTable"><property name="alternatingRowColors"><bool>true</bool></property><property name="selectionBehavior"><enum>QAbstractItemView::SelectRows</enum></property><property name="selectionMode"><enum>QAbstractItemView::SingleSelection</enum></property><property name="horizontalScrollMode"><enum>QAbstractItemView::ScrollPerPixel</enum></property><property name="verticalScrollMode"><enum>QAbstractItemView::ScrollPerPixel</enum></property><attribute name="verticalHeaderVisible"><bool>true</bool></attribute></widget></item>
+             <item><widget class="QPushButton" name="summaryToggleButton"><property name="minimumSize"><size><width>24</width><height>90</height></size></property><property name="maximumSize"><size><width>24</width><height>90</height></size></property><property name="text"><string>›</string></property></widget></item>
+             <item>
+             <widget class="QFrame" name="summaryPanel">
+              <property name="minimumSize"><size><width>280</width><height>0</height></size></property><property name="maximumSize"><size><width>280</width><height>16777215</height></size></property>
+              <layout class="QVBoxLayout" name="summaryLayout">
+               <property name="leftMargin"><number>14</number></property><property name="topMargin"><number>14</number></property><property name="rightMargin"><number>14</number></property><property name="bottomMargin"><number>14</number></property>
+               <item><widget class="QLabel" name="summaryTitle"><property name="styleSheet"><string notr="true">font-size:16px;font-weight:700</string></property><property name="text"><string>未选择元件</string></property></widget></item>
+               <item><widget class="QLabel" name="summaryProductCodeLabel"><property name="text"><string>商品编号</string></property></widget></item><item><widget class="QLabel" name="summaryProductCode"><property name="text"><string>—</string></property><property name="wordWrap"><bool>true</bool></property></widget></item>
+               <item><widget class="QLabel" name="summaryProductTypeLabel"><property name="text"><string>类别</string></property></widget></item><item><widget class="QLabel" name="summaryProductType"><property name="text"><string>—</string></property><property name="wordWrap"><bool>true</bool></property></widget></item>
+               <item><widget class="QLabel" name="summaryPackageLabel"><property name="text"><string>封装</string></property></widget></item><item><widget class="QLabel" name="summaryPackage"><property name="text"><string>—</string></property><property name="wordWrap"><bool>true</bool></property></widget></item>
+               <item><widget class="QLabel" name="summaryBrandLabel"><property name="text"><string>品牌</string></property></widget></item><item><widget class="QLabel" name="summaryBrand"><property name="text"><string>—</string></property><property name="wordWrap"><bool>true</bool></property></widget></item>
+               <item><widget class="QLabel" name="summaryCurrentStockLabel"><property name="text"><string>当前库存</string></property></widget></item><item><widget class="QLabel" name="summaryCurrentStock"><property name="styleSheet"><string notr="true">font-size:24px;font-weight:700;color:#2563eb;background:transparent</string></property><property name="text"><string>—</string></property><property name="wordWrap"><bool>true</bool></property></widget></item>
+               <item><widget class="QLabel" name="summaryLatestOrderTimeLabel"><property name="text"><string>最近购买</string></property></widget></item><item><widget class="QLabel" name="summaryLatestOrderTime"><property name="text"><string>—</string></property><property name="wordWrap"><bool>true</bool></property></widget></item>
+               <item><widget class="QLabel" name="summaryLocationLabel"><property name="text"><string>位置／备注</string></property></widget></item><item><widget class="QLabel" name="summaryLocation"><property name="text"><string>—</string></property><property name="wordWrap"><bool>true</bool></property></widget></item>
+               <item><layout class="QHBoxLayout" name="stockButtonsLayout"><item><widget class="QPushButton" name="stockInButton"><property name="text"><string>入库</string></property></widget></item><item><widget class="QPushButton" name="stockOutButton"><property name="text"><string>出库</string></property></widget></item></layout></item>
+               <item><widget class="QPushButton" name="historyButton"><property name="text"><string>查看库存流水</string></property></widget></item>
+               <item><spacer name="summarySpacer"><property name="orientation"><enum>Qt::Vertical</enum></property><property name="sizeHint"><size><width>20</width><height>40</height></size></property></spacer></item>
+              </layout>
+             </widget></item>
+            </layout>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

@@ -1,0 +1,9 @@
+Metadata-Version: 2.4
+Name: partbox
+Version: 0.1.0
+Summary: 小料仓 PartBOX - 电子元件库存管理器
+Requires-Python: >=3.10
+Requires-Dist: PySide6<7,>=6.8
+Requires-Dist: pandas<3,>=2.2
+Requires-Dist: xlrd<3,>=2
+Requires-Dist: openpyxl<4,>=3.1

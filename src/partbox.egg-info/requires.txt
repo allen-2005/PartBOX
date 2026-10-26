@@ -1,0 +1,4 @@
+PySide6<7,>=6.8
+pandas<3,>=2.2
+xlrd<3,>=2
+openpyxl<4,>=3.1

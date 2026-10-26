@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "partbox"
+version = "0.1.0"
+description = "小料仓 PartBOX - 电子元件库存管理器"
+requires-python = ">=3.10"
+dependencies = [
+  "PySide6>=6.8,<7",
+  "pandas>=2.2,<3",
+  "xlrd>=2,<3",
+  "openpyxl>=3.1,<4",
+]
+
+[project.scripts]
+partbox = "partbox.app:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+"partbox.ui" = ["forms/*.ui"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"
